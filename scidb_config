@@ -1,0 +1,31 @@
+[cluster]
+server-0=HOSTNAME,3
+install_root=/opt/scidb/14.3
+metadata=/opt/scidb/14.3/share/scidb/meta.sql
+pluginsdir=/opt/scidb/14.3/lib/scidb/plugins
+logconf=/opt/scidb/14.3/share/scidb/log4cxx.properties
+db_user=postgres
+db_passwd=scidb
+base-port=1239
+base-path=/home/scidb/scidb_data
+tmp-path=/tmp
+redundancy=0
+mem-array-threshold=338
+smgr-cache-size=338
+merge-sort-buffer=85
+network-buffer=169
+max-memory-limit=2048
+execution-threads=4
+result-prefetch-threads=4
+result-prefetch-queue-size=2
+operator-threads=2
+
+####################
+# WARNING: Make sure all of the below directories are created
+# before you execute 'initall'
+
+# Instance storage directories on localhost
+data-dir-prefix-0-0=/home/scidb/disk0/cluster.0.0
+data-dir-prefix-0-1=/home/scidb/disk0/cluster.0.1
+data-dir-prefix-0-2=/home/scidb/disk0/cluster.0.2
+data-dir-prefix-0-3=/home/scidb/disk0/cluster.0.3
